@@ -5,7 +5,9 @@ include 'header.php';
 // Customize your presentation titles and Google Slides embed links here
 $presentations = [
     'MUN Guide upload' => 'https://docs.google.com/presentation/d/1t_Pmf9IF6_qbrD5AfFCXePWbycvHehvc/edit?usp=sharing&ouid=101461196384681525199&rtpof=true&sd=true',
-    'Uploading file here' => 'https://docs.google.com/presentation/d/e/2PACX-1vTtMgB9EcLKoq8F7aOGmLxVGgV7uv8_UWbk-VQskT6BpAnLwMZz6Xl9bY8YPK7ivw/pub?start=false&loop=false&delayms=3000'
+    'Uploading file here' => 'https://docs.google.com/presentation/d/e/2PACX-1vTtMgB9EcLKoq8F7aOGmLxVGgV7uv8_UWbk-VQskT6BpAnLwMZz6Xl9bY8YPK7ivw/pub?start=false&loop=false&delayms=3000',
+    'General Definitions' => 'https://docs.google.com/document/d/1VClpBQINdTfJqSo2NDdC6juT-IsuvwJz/edit?usp=sharing&ouid=101461196384681525199&rtpof=true&sd=true'
+
 ];
 
 // Detect if a specific presentation is selected
@@ -79,14 +81,14 @@ $selected = isset($_GET['slide']) ? $_GET['slide'] : null;
       <iframe src="<?php echo $presentations[$selected]; ?>" allowfullscreen></iframe>
       <a class="learnmun-button" href="?">Go Back</a>
     <?php else: ?>
-      <h2>Select a Presentation</h2>
+      <h2>Select a File</h2>
       <ul class="learnmun-menu">
         <?php foreach ($presentations as $name => $link): ?>
           <li><a href="?slide=<?php echo urlencode($name); ?>"><?php echo htmlspecialchars($name); ?></a></li>
         <?php endforeach; ?>
       </ul>
 
-      <div class="learnmun-download-link">
+      <!-- <div class="learnmun-download-link">
         <h3>Download Resources</h3>
         <ul class="learnmun-menu">
           <?php
@@ -99,7 +101,7 @@ $selected = isset($_GET['slide']) ? $_GET['slide'] : null;
           }
           ?>
         </ul>
-      </div>
+      </div> -->
     <?php endif; ?>
   </main>
 </body>
