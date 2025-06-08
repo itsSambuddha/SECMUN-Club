@@ -13,7 +13,7 @@
         <h2> Welcome to the Secmun club </h2>
         
         <div class="image-placeholder">
-            Some banner image of the club
+            Some banner image of the club 
         </div>
         <p> this shall be the homepage of the website</p>
     </div>    
