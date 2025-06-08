@@ -16,6 +16,7 @@
       <li><a href="secretariat.php">Secretariat</a></li>
       <li><a href="learn_mun.php">Learn MUN</a></li>
       <li><a href="gazette.php">The SECMUN Gazette</a></li>
+      <li><a href="event.php"> Events of SECMUN </a></li>
     </ul>
   </nav>
   <button class="menubar-toggle" id="menubar-toggle" aria-label="Toggle menu">

@@ -259,29 +259,6 @@
 </body>
 </html>
 
-        function updateProgressBar2(i) {
-          const progressPercent = ((i + 1) / totalItems2) * 100;
-          progressBarFill2.style.width = progressPercent + '%';
-        }
-
-      function showSlide2(i) {
-        if (i < 0) index2 = totalItems2 - 1;
-        else if (i >= totalItems2) index2 = 0;
-        else index2 = i;
-        carousel2.style.transform = 'translateX(' + (-index2 * 100) + '%)';
-        updateProgressBar2(index2);
-      }
-
-      prevBtn2.addEventListener('click', () => {
-        showSlide2(index2 - 1);
-      });
-
-      nextBtn2.addEventListener('click', () => {
-        showSlide2(index2 + 1);
-      });
-
-      showSlide2(index2);
-    })();
   </script>
 </body>
 </html>
