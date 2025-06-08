@@ -15,7 +15,7 @@
         <div class="image-placeholder">
             Some banner image of the club
         </div>
-        <p> this shall be the homepage of the website kkkk</p>
+        <p> this shall be the homepage of the website</p>
     </div>    
 
     <?php include 'footer.php'; ?>

@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include "header.php"; ?>
-        
+        <?php include "index_sidebar.php";?>
     <div id="app">
         <h2> Achievements of SECMUN </h2>
         <p> in this section i shall use a gallery kind of thing to showcase the achievements </p>
