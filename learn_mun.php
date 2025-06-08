@@ -4,8 +4,8 @@ include 'header.php';
 
 // Customize your presentation titles and Google Slides embed links here
 $presentations = [
-    'Introduction to AI' => 'https://docs.google.com/presentation/d/e/2PACX-1vQmZf8kR8Uc4N2-JxzIqG8yZhQfWdsK3OZg9zcfu0ZC9YZ-M1e7kE8I6x7TyxYdU/pub?start=false&loop=false&delayms=3000',
-    'Machine Learning Basics' => 'https://docs.google.com/presentation/d/e/2PACX-1vTtMgB9EcLKoq8F7aOGmLxVGgV7uv8_UWbk-VQskT6BpAnLwMZz6Xl9bY8YPK7ivw/pub?start=false&loop=false&delayms=3000'
+    'MUN Guide upload' => 'https://docs.google.com/presentation/d/1t_Pmf9IF6_qbrD5AfFCXePWbycvHehvc/edit?usp=sharing&ouid=101461196384681525199&rtpof=true&sd=true',
+    'Uploading file here' => 'https://docs.google.com/presentation/d/e/2PACX-1vTtMgB9EcLKoq8F7aOGmLxVGgV7uv8_UWbk-VQskT6BpAnLwMZz6Xl9bY8YPK7ivw/pub?start=false&loop=false&delayms=3000'
 ];
 
 // Detect if a specific presentation is selected
