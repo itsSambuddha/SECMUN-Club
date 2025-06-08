@@ -17,24 +17,24 @@
       <div class="carousel" id="carousel">
         <div class="carousel-item">
           <img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" alt="President" />
-          <div class="caption">President</div>
+          <div class="caption">The President</div>
           <div class="info-placeholder">
             <ul>
               <li>Name: Naphibansabet Byrsat</li>
-              <li>Dept: Sociology</li>
-              <li>Sem: 5</li>
+              <li>Department: Sociology</li>
+              <li>Semester: 5th</li>
             </ul>
             <p>Miscellaneous message here.</p>
           </div>
         </div>
         <div class="carousel-item">
           <img src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg" alt="Secretary General" />
-          <div class="caption">Secretary General</div>
+          <div class="caption">The Secretary General</div>
           <div class="info-placeholder">
             <ul>
               <li>Name: Sambuddha Das</li>
-              <li>Dept: Computer Science</li>
-              <li>Sem: 4</li>
+              <li>Department: Computer Science</li>
+              <li>Semester: 5th</li>
             </ul>
             <p>Miscellaneous message here.</p>
           </div>
@@ -45,8 +45,8 @@
           <div class="info-placeholder">
             <ul>
               <li>Name: Sneha Das</li>
-              <li>Dept: Psychology</li>
-              <li>Sem: 3</li>
+              <li>Department: Psychology</li>
+              <li>Semester: 3rd</li>
             </ul>
             <p>Miscellaneous message here.</p>
           </div>
@@ -60,8 +60,8 @@
       <div class="new-progress-bar" id="progressBar2"><div class="new-progress-bar-fill" id="progressBarFill2"></div></div>
       <div class="carousel" id="carouselCopy">
         <div class="carousel-item">
-          <img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" alt="President" />
-          <div class="caption">President</div>
+          <img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg" alt="USG_PR" />
+          <div class="caption">Head of Public Relations</div>
           <div class="info-placeholder">
             <ul>
               <li>Name: Naphibansabet Byrsat</li>
@@ -72,8 +72,8 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg" alt="Secretary General" />
-          <div class="caption">Secretary General</div>
+          <img src="https://cdn.vuetifyjs.com/images/cards/hotel.jpg" alt="USG_D_PR" />
+          <div class="caption">Deputy Head of Public Relations</div>
           <div class="info-placeholder">
             <ul>
               <li>Name: Sambuddha Das</li>

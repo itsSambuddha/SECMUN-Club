@@ -23,7 +23,8 @@
       <br>
       <p> At SECMUN, we believe that ideas alone are not enough. It is the courage to turn insight into initiative that defines true leadership — and that is the legacy we aim to instill. </p>
 <br><br>
-  
+   <div>
+  </div>
   <?php include 'footer.php'; ?>
 </body>
 </html>
