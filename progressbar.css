@@ -1,0 +1,20 @@
+.new-progress-bar {
+  position: relative;
+  height: 10px;
+  width: 100%;
+  background-color: #d3d3d3; /* light gray background */
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.new-progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #3d7ab3; /* primary blue color */
+  border-radius: 5px;
+  transition: width 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
