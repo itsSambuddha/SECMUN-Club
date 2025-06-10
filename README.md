@@ -77,7 +77,7 @@ This site includes responsive layout (only for PC as of now), role-based login s
 
 ## 📄 File Descriptions
 
-1. ###Core Files
+1. **Core Files**
 
 * **auth.php:** Handles login session validation and redirects unauthorized users.
 
@@ -87,63 +87,63 @@ This site includes responsive layout (only for PC as of now), role-based login s
 
 * **logout.php:** Terminates user sessions and redirects to the login/signup page.
 
-User Access & Dashboard
+2. **User Access & Dashboard**
 
-login_signup.php: Single page to handle both login and signup logic, storing user role.
+* **login_signup.php:** Single page to handle both login and signup logic, storing user role.
 
-dashboard_user.php: Interface for regular users to see events, updates, and participation.
+* **dashboard_user.php:** Interface for regular users to see events, updates, and participation.
 
-dashboard_topadmin.php: Full-access admin panel for overseeing all modules.
+* **dashboard_topadmin.php:** Full-access admin panel for overseeing all modules.
 
-dashboard_midadmin.php: Mid-level dashboard with restricted access rights.
+* **dashboard_midadmin.php:** Mid-level dashboard with restricted access rights.
 
-delegate_allotment.php: Admin-only interface for assigning delegates to roles/events.
+* **delegate_allotment.php:** Admin-only interface for assigning delegates to roles/events.
 
-Public Pages
+3. **Public Pages**
 
-index.php: Main landing page with general information and links.
+* **index.php:** Main landing page with general information and links.
 
-about.php: Overview of SEC MUN, its mission, and legacy.
+* **about.php:** Overview of SEC MUN, its mission, and legacy.
 
-achievements.php: Highlights and showcases awards, recognitions, and milestones.
+* **achievements.php:** Highlights and showcases awards, recognitions, and milestones.
 
-contact.php: Contains a contact form for reaching out to the club.
+* **contact.php:** Contains a link to Instagram and WhatsApp links for reaching out to the club.
 
-event.php: Displays upcoming MUN events or conferences.
+* **event.php:** Displays upcoming MUN events or conferences.
 
-gazette.php: Shows github project made by Mr. Vivian Alexandar Lyngdoh Noglait, which houses the club magazine(s) and the club newsletter(s).
+* **gazette.php:** Shows github project made by Mr. Vivian Alexandar Lyngdoh Noglait, which houses the club magazine(s) and the club newsletter(s).
 
-learn_mun.php: Educational content introducing MUN concepts and terminology.
+* **learn_mun.php:** Educational content introducing MUN concepts and terminology.
 
-Layout Components
+4. **Layout Components**
 
-header.php: Shared header/navbar across all pages.
+* **header.php:** Shared header/navbar across all pages.
 
-footer.php: Shared footer across all pages.
+* **footer.php:** Shared footer across all pages.
 
-index_sidebar.php: Sidebar used within dashboard interfaces.
+* **index_sidebar.php:** Sidebar used within dashboard interfaces.
 
-Stylesheets
+5. Stylesheets
 
-style.css: Primary CSS file managing layout, typography, and responsiveness.
+* **style.css:** Primary CSS file managing layout, typography, and responsiveness.
 
-sidebar_style.css: Specific styles for the dashboard sidebars.
+* **sidebar_style.css:** Specific styles for the dashboard sidebars.
 
-progressbar.css: Styling for custom progress indicators.
+* **progressbar.css:** Styling for custom progress indicators.
 
-Assets
+6. **Assets**
 
-secmuny.png: Main logo for the club.
+* **secmuny.png:** Main logo for the club.
 
-secretariat.png: Image of the secretariat or club members.
+* **secretariat.png:** Image of the secretariat or club members.
 
-instagram-icon.png: Social media icon.
+* **instagram-icon.png:** Social media icon.
 
-whatsapp-icon-design.png: WhatsApp contact icon.
+* **whatsapp-icon-design.png:** WhatsApp contact icon.
 
-Config & Deployment
+7. **Config & Deployment**
 
-.github/workflows/jekyll-gh-pages.yml: GitHub Actions workflow for CI/CD and GitHub Pages deployment.
+* **.github/workflows/jekyll-gh-pages.yml:** GitHub Actions workflow for CI/CD and GitHub Pages deployment.
 
 ---
 
@@ -152,8 +152,8 @@ Config & Deployment
 | Role      | Access                     | Permissions                              |
 | --------- | -------------------------- | ---------------------------------------- |
 | Guest     | Public pages               | View only                                |
-| User      | Logged-in club member      | View role-specific data                  |
-| Admin     | Mid-level core committee   | Submit posts (pending approval)          |
+| User      | Logged-in club member/USG Secretariat      | View role-specific data                  |
+| Admin     | Mid-level core committee (Teacher I/C & Assistant Secretary General) | Submit posts (pending approval)          |
 | Top Admin | President, Secretary, etc. | Approve/reject admins, full site control |
 
 ---
@@ -164,11 +164,11 @@ Config & Deployment
 
 📊 Role-Based Dashboards: Dashboards for users, mid admins, and top admins
 
-🧾 Delegate Management: Admin pages for allotting delegate positions and MUN roles
+🧾 Delegate Management: Admin pages for keeping track of delegate allotments and MUN roles
 
 📰 Gazette System: Linking to an external github link of a project made by Mr. Vivian Alexandar Lyngdoh Noglait 
 
-📩 Contact Form: Form submission capability to reach the club
+📩 Contact Space: Capability to reach the club
 
 🧠 Learn MUN: Dedicated section with resources for students new to MUNs
 
