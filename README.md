@@ -184,7 +184,7 @@ Developed by:
 **Sambuddha Das**
 *Secretary General of the SECMUN Club*
 Department of Computer Science
-\[St. Edmund's College]/
+St. Edmund's College
 
 ---
 
