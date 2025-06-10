@@ -1,4 +1,4 @@
-# 📘 The SECMUN Club Website
+# 🇺🇳 The SECMUN Club Website
 
 **The SECMUN Club Website** is a dynamic, PHP-based web application designed for managing and showcasing the activities, achievements, and structure of the SECMUN Club. The system supports user registrations, administrator hierarchies, content display, and modular site navigation with secure authentication. It features a public-facing website and multiple dashboards (admin -top admin, mid admin and user) with role-based access control. Additionally, it supports event listings, contact forms, achievement displays, gazette publishing, and a dedicated section for MUN learning resources.
 
