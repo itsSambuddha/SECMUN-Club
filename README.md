@@ -222,7 +222,7 @@ Config & Deployment
 ## 👨‍💻 Credits
 
 Developed by:
-* **Sambuddha Das** *your avg 'hated by all thus isolated' student
+* **Sambuddha Das** *your avg 'hated by all thus isolated' student*
 * *Secretary General of the SECMUN Club*
 * Department of Computer Science
 * St. Edmund's College
