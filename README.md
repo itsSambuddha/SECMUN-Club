@@ -191,6 +191,6 @@ Developed by:
 ## 📜 License
 
 This project is under MIT License. Use it freely for educational and club-related purposes.
-*I copied this from ChatGPT hehehe*
+* *I copied this from ChatGPT hehehe*
 
 ---
