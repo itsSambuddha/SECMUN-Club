@@ -1,6 +1,6 @@
 # 📘 The SECMUN Club Website
 
-**The SECMUN Club Website** is a dynamic, PHP-based web application designed for managing and showcasing the activities, achievements, and structure of the SECMUN Club. The system supports user registrations, administrator hierarchies, content display, and modular site navigation with secure authentication. It features a public-facing website and multiple dashboards (admin, top admin, mid admin, and user) with role-based access control. Additionally, it supports event listings, contact forms, achievement displays, gazette publishing, and a dedicated section for MUN learning resources.
+**The SECMUN Club Website** is a dynamic, PHP-based web application designed for managing and showcasing the activities, achievements, and structure of the SECMUN Club. The system supports user registrations, administrator hierarchies, content display, and modular site navigation with secure authentication. It features a public-facing website and multiple dashboards (admin -top admin, mid admin and user) with role-based access control. Additionally, it supports event listings, contact forms, achievement displays, gazette publishing, and a dedicated section for MUN learning resources.
 
 ---
 
@@ -77,15 +77,15 @@ This site includes responsive layout (only for PC as of now), role-based login s
 
 ## 📄 File Descriptions
 
-Core Files
+1. ###Core Files
 
-auth.php: Handles login session validation and redirects unauthorized users.
+* **auth.php:** Handles login session validation and redirects unauthorized users.
 
-db_connect.php: Establishes a MySQL database connection for all pages.
+* **db_connect.php:** Establishes a MySQL database connection for all pages.
 
-functions.php: Contains reusable PHP helper functions (e.g., redirect, sanitize input).
+* **functions.php:** Contains reusable PHP helper functions (e.g., redirect, sanitize input).
 
-logout.php: Terminates user sessions and redirects to the login/signup page.
+* **logout.php:** Terminates user sessions and redirects to the login/signup page.
 
 User Access & Dashboard
 
