@@ -32,44 +32,45 @@ This site includes responsive layout (only for PC as of now), role-based login s
 / (root)
 │
 ├── .github/workflows/
-│   └── jekyll-gh-pages.yml        # GitHub Pages deployment config
+│   └── jekyll-gh-pages.yml
 │
-├── uploads/ppts/                 # Folder for storing presentation files used in dashboards
+├── uploads/ppts/
 │
-├── SEC MUN.sql                   # MySQL dump file to create necessary database tables and structure
-├── README.md                     # Project documentation
+├── SEC MUN.sql
+├── README.md
 │
-├── auth.php                      # Handles session management and authentication enforcement
-├── db_connect.php                # Establishes MySQL database connection
-├── functions.php                 # Contains reusable helper functions for redirection, validation, etc.
-├── logout.php                    # Destroys sessions and logs out the user
+├── auth.php
+├── db_connect.php
+├── functions.php
+├── logout.php
 │
-├── login_signup.php              # Provides both login and signup functionality with validations
-├── dashboard_user.php            # Dashboard for regular users to view assigned data and updates
-├── dashboard_topadmin.php        # Dashboard for top-level admins with full privileges
-├── dashboard_midadmin.php        # Dashboard for mid-level admins with restricted access
+├── login_signup.php
+├── dashboard_user.php
+├── dashboard_topadmin.php
+├── dashboard_midadmin.php
 │
-├── header.php                    # Common navigation/header bar included across pages
-├── footer.php                    # Common footer used on all pages
-├── index.php                     # Website's landing/home page
-├── about.php                     # Provides information about the SEC MUN club and its vision
-├── achievements.php              # Lists club achievements in a structured manner
-├── contact.php                   # Page containing a contact form for reaching out to the club
-├── event.php                     # Displays upcoming or past events with optional registration
-├── gazette.php                   # Acts as a news/blog module for club updates
-├── delegate_allotment.php        # Page to assign delegates to events/sessions
-├── learn_mun.php                 # Educates users about MUN format, roles, and terminology
-├── index_sidebar.php             # Reusable sidebar layout for navigation (used with dashboards)
+├── header.php
+├── footer.php
+├── index.php
+├── about.php
+├── achievements.php
+├── contact.php
+├── event.php
+├── gazette.php
+├── delegate_allotment.php
+├── learn_mun.php
+├── index_sidebar.php
 │
-├── style.css                     # Main stylesheet for layout, colors, fonts, and general responsiveness
-├── sidebar_style.css             # Sidebar-specific layout and behavior styling
-├── progressbar.css               # Custom progress bar designs for visual tracking elements
+├── style.css
+├── sidebar_style.css
+├── progressbar.css
 │
-├── assets/                       # Icons and images used across the platform
-│   ├── instagram-icon.png        # Instagram social media icon
-│   ├── whatsapp-icon-design.png  # WhatsApp contact icon
-│   ├── secmuny.png               # Club logo used in header/footer
-│   └── secretariat.png           # Group photo or image of the secretariat
+├── assets/
+│   ├── instagram-icon.png
+│   ├── whatsapp-icon-design.png
+│   ├── secmuny.png
+│   └── secretariat.png
+
 ```
 
 ---
