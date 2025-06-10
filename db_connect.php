@@ -1,7 +1,7 @@
 <?php
 
 $host ='localhost';
-$database='sec_mun_db';
+$database='SEC_MUN_DB';
 $user='root';
 $pass='';
 $charset='utf8mb4';

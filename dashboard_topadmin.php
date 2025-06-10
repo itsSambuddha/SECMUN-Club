@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include 'header.php';
 include 'index_sidebar.php';
 require_once 'db_connect.php';
@@ -7,14 +10,20 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'TopAdmin') {
+if (!isset($_SESSION['user_id']) || strtolower($_SESSION['user_role'] ?? '') !== 'topadmin') {
     header('Location: login_signup.php');
     exit;
 }
 
 // Fetch committees for delegate allotment form
-$committees = $pdo->query("SELECT * FROM Committees ORDER BY committee_name ASC")->fetchAll();
-?>
+$committees = $pdo->query("SELECT * FROM committees ORDER BY committee_name ASC")->fetchAll();
+
+// if ($committees === false) {
+//     echo "<p>Error fetching committees from database.</p>";
+// } else {
+//     echo "<p>Committees fetched: " . count($committees) . "</p>";
+// }
+// ?>
 
 <div class="container">
 <main class="dashboard">

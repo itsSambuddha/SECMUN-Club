@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SECMUN Club - Login/Signup</title>
-  <link rel="stylesheet" href="style.css" />
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
-<body>
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include 'header.php';
 require_once 'db_connect.php';
 require_once 'functions.php';
@@ -23,14 +15,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
     $name = $_POST['name'] ?? '';
-    $phone_number = $_POST['country_code'] . ($_POST['contact_number'] ?? '');
     $department = $_POST['department'] ?? '';
     $class_roll_no = $_POST['college_roll_no'] ?? '';
     $office = $_POST['office'] ?? '';
 
-if ($action === 'login') {
+    if ($action === 'login') {
         $result = loginUser($email, $password, $pdo);
         if ($result['success']) {
+            // Debug output for session variables
+            echo '<pre>DEBUG after login: ';
+            echo 'user_id=' . ($_SESSION['user_id'] ?? 'NOT SET') . "\n";
+            echo 'username=' . ($_SESSION['username'] ?? 'NOT SET') . "\n";
+            echo 'role=' . ($_SESSION['role'] ?? 'NOT SET') . "\n";
+            echo 'user_role=' . ($_SESSION['user_role'] ?? 'NOT SET') . "\n";
+            echo 'is_admin=' . ($_SESSION['is_admin'] ?? 'NOT SET') . "\n";
+            echo '</pre>';
+
             if ($role === 'admin' && !isAdmin()) {
                 $message = 'Access denied. Admins only.';
                 logout();
@@ -41,7 +41,12 @@ if ($action === 'login') {
         } else {
             $message = $result['message'];
         }
-    }
+    } elseif ($action === 'signup') {
+        $phone_number = '';
+        if (isset($_POST['country_code']) && isset($_POST['contact_number'])) {
+            $phone_number = $_POST['country_code'] . $_POST['contact_number'];
+        }
+
         $allowed_admin_offices = ['President', 'Secretary General', 'Assistant Secretary General', 'Teacher'];
         if ($role === 'admin' && !in_array($office, $allowed_admin_offices)) {
             $message = 'Invalid admin office selected.';
@@ -52,8 +57,19 @@ if ($action === 'login') {
                 : $result['message'];
         }
     }
+}
 
-?>
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SECMUN Club - Login/Signup</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
 <div class="form-wrapper">
   <div class="form-container">
     <h2 id="form-title" class="form-title">Login - <?php echo ucfirst($role); ?></h2>
@@ -73,16 +89,16 @@ if ($action === 'login') {
         </div>
       </div>
 
-  <div class="input-box">
-  <label>Password:</label>
-  <div class="input-with-icon">
-    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-    <input type="password" name="password" required id="password-signup" />
-    <span class="toggle-password" onclick="togglePassword('password-signup', this)">
-      <ion-icon name="eye-off"></ion-icon>
-    </span>
-  </div>
-</div>
+      <div class="input-box">
+        <label>Password:</label>
+        <div class="input-with-icon">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input type="password" name="password" required id="password-signup-signup" />
+          <span class="toggle-password" onclick="togglePassword('password-signup-signup', this)">
+            <ion-icon name="eye-off"></ion-icon>
+          </span>
+        </div>
+      </div>
 
       <div class="checkbox-container">
         <input type="checkbox" name="remember" />
@@ -168,6 +184,18 @@ if ($action === 'login') {
     <div class="toggle-link" onclick="toggleForms()">Don't have an account? Sign Up</div>
   </div>
 </div>
+
+<script>
+  // Hide the duplicate login form if it exists
+  document.addEventListener('DOMContentLoaded', function() {
+    const loginForms = document.querySelectorAll('#login-form');
+    if (loginForms.length > 1) {
+      for (let i = 1; i < loginForms.length; i++) {
+        loginForms[i].style.display = 'none';
+      }
+    }
+  });
+</script>
 <?php include 'footer.php'; ?>
 <script>
 function toggleForms() {

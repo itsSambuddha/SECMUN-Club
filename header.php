@@ -22,7 +22,7 @@ session_start();
 
       <?php if (isset($_SESSION['user_id'])): ?>
         <a href="logout.php" class="nav-link">Logout (<?php echo htmlspecialchars($_SESSION['username']); ?>)</a>
-        <?php if (!empty($_SESSION['is_admin'])): ?>
+      <?php if (!empty($_SESSION['is_admin']) || (isset($_SESSION['role']) && in_array($_SESSION['role'], ['President', 'Secretary General', 'Assistant Secretary General', 'Teacher', 'TopAdmin']))): ?>
           <a href="dashboard_topadmin.php"><button class="log">Admin Dashboard</button></a>
         <?php endif; ?>
       <?php else: ?>
