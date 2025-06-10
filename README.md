@@ -1,6 +1,6 @@
 # 📘 The SECMUN Club Website
 
-**The SECMUN Club Website** is a dynamic, PHP-based web application designed for managing and showcasing the activities, achievements, and structure of the SECMUN Club. The system supports user registrations, administrator hierarchies, content display, and modular site navigation with secure authentication.
+**The SECMUN Club Website** is a dynamic, PHP-based web application designed for managing and showcasing the activities, achievements, and structure of the SECMUN Club. The system supports user registrations, administrator hierarchies, content display, and modular site navigation with secure authentication. It features a public-facing website and multiple dashboards (admin, top admin, mid admin, and user) with role-based access control. Additionally, it supports event listings, contact forms, achievement displays, gazette publishing, and a dedicated section for MUN learning resources.
 
 ---
 
@@ -29,88 +29,120 @@ This site includes responsive layout (only for PC as of now), role-based login s
 ## 🗃️ Directory Structure
 
 ```
-THE SECMUN CLUB WEBSITE/
-├── assets/
-│   ├── auth.php
-│   └── style.css
-├── about.php
-├── achievements.php
-├── db_connect.php
-├── footer.php
-├── functions.php
-├── gazette.php
-├── header.php
-├── index.php
-├── login_signup.php
-├── logout.php
-├── SECMUN.sql
-└── README.md
+/ (root)
+│
+├── .github/workflows/
+│   └── jekyll-gh-pages.yml        # GitHub Pages deployment config
+│
+├── uploads/ppts/                 # Folder for storing presentation files used in dashboards
+│
+├── SEC MUN.sql                   # MySQL dump file to create necessary database tables and structure
+├── README.md                     # Project documentation
+│
+├── auth.php                      # Handles session management and authentication enforcement
+├── db_connect.php                # Establishes MySQL database connection
+├── functions.php                 # Contains reusable helper functions for redirection, validation, etc.
+├── logout.php                    # Destroys sessions and logs out the user
+│
+├── login_signup.php              # Provides both login and signup functionality with validations
+├── dashboard_user.php            # Dashboard for regular users to view assigned data and updates
+├── dashboard_topadmin.php        # Dashboard for top-level admins with full privileges
+├── dashboard_midadmin.php        # Dashboard for mid-level admins with restricted access
+│
+├── header.php                    # Common navigation/header bar included across pages
+├── footer.php                    # Common footer used on all pages
+├── index.php                     # Website's landing/home page
+├── about.php                     # Provides information about the SEC MUN club and its vision
+├── achievements.php              # Lists club achievements in a structured manner
+├── contact.php                   # Page containing a contact form for reaching out to the club
+├── event.php                     # Displays upcoming or past events with optional registration
+├── gazette.php                   # Acts as a news/blog module for club updates
+├── delegate_allotment.php        # Page to assign delegates to events/sessions
+├── learn_mun.php                 # Educates users about MUN format, roles, and terminology
+├── index_sidebar.php             # Reusable sidebar layout for navigation (used with dashboards)
+│
+├── style.css                     # Main stylesheet for layout, colors, fonts, and general responsiveness
+├── sidebar_style.css             # Sidebar-specific layout and behavior styling
+├── progressbar.css               # Custom progress bar designs for visual tracking elements
+│
+├── assets/                       # Icons and images used across the platform
+│   ├── instagram-icon.png        # Instagram social media icon
+│   ├── whatsapp-icon-design.png  # WhatsApp contact icon
+│   ├── secmuny.png               # Club logo used in header/footer
+│   └── secretariat.png           # Group photo or image of the secretariat
 ```
 
 ---
 
-## 📂 File Descriptions
+## 📄 File Descriptions
 
-### 🔐 `auth.php`
+Core Files
 
-* Handles session-based access control
-* Redirects unauthenticated users
-* Used in pages where login is required
+auth.php: Handles login session validation and redirects unauthorized users.
 
-### 🎨 `style.css`
+db_connect.php: Establishes a MySQL database connection for all pages.
 
-* Contains all site styles
-* Responsive layout, forms, buttons, text formatting
-* Shared across all pages
+functions.php: Contains reusable PHP helper functions (e.g., redirect, sanitize input).
 
-### 📂 `db_connect.php`
+logout.php: Terminates user sessions and redirects to the login/signup page.
 
-* Establishes MySQL connection via `mysqli` or `PDO`
-* Required for all DB-related operations
+User Access & Dashboard
 
-### 🧠 `functions.php`
+login_signup.php: Single page to handle both login and signup logic, storing user role.
 
-* Houses utility functions for:
+dashboard_user.php: Interface for regular users to see events, updates, and participation.
 
-  * Registering users/admins
-  * Logging in users
-  * Role and approval verification
+dashboard_topadmin.php: Full-access admin panel for overseeing all modules.
 
-### 🏠 `index.php`
+dashboard_midadmin.php: Mid-level dashboard with restricted access rights.
 
-* Homepage
-* Introductory content about the club
+delegate_allotment.php: Admin-only interface for assigning delegates to roles/events.
 
-### 🧾 `about.php`
+Public Pages
 
-* Static info about club vision, mission, team, etc.
+index.php: Main landing page with general information and links.
 
-### 🏆 `achievements.php`
+about.php: Overview of SEC MUN, its mission, and legacy.
 
-* Displays club achievements
-* Can be static or DB-driven
+achievements.php: Highlights and showcases awards, recognitions, and milestones.
 
-### 📰 `gazette.php`
+contact.php: Contains a contact form for reaching out to the club.
 
-* Displays club publications or event summaries
-* (Optional: download links for PDFs)
+event.php: Displays upcoming MUN events or conferences.
 
-### 🔐 `login_signup.php`
+gazette.php: Shows github project made by Mr. Vivian Alexandar Lyngdoh Noglait, which houses the club magazine(s) and the club newsletter(s).
 
-* Handles both login and registration
-* Role toggle between `user` and `admin`
-* Dynamic feedback and validations
+learn_mun.php: Educational content introducing MUN concepts and terminology.
 
-### 🚪 `logout.php`
+Layout Components
 
-* Destroys session and logs out user/admin
+header.php: Shared header/navbar across all pages.
 
-### 🧱 `SECMUN.sql`
+footer.php: Shared footer across all pages.
 
-* Database schema dump
-* Contains table(s):
+index_sidebar.php: Sidebar used within dashboard interfaces.
 
-  * `users`: stores name, email, password (hashed), role, approval status, post
+Stylesheets
+
+style.css: Primary CSS file managing layout, typography, and responsiveness.
+
+sidebar_style.css: Specific styles for the dashboard sidebars.
+
+progressbar.css: Styling for custom progress indicators.
+
+Assets
+
+secmuny.png: Main logo for the club.
+
+secretariat.png: Image of the secretariat or club members.
+
+instagram-icon.png: Social media icon.
+
+whatsapp-icon-design.png: WhatsApp contact icon.
+
+Config & Deployment
+
+.github/workflows/jekyll-gh-pages.yml: GitHub Actions workflow for CI/CD and GitHub Pages deployment.
 
 ---
 
@@ -127,12 +159,21 @@ THE SECMUN CLUB WEBSITE/
 
 ## 🧪 Features
 
-* ✅ Secure login/signup with hashed passwords
-* ✅ Role-based dynamic content rendering
-* ✅ Admin approval system
-* ✅ Mobile-responsive layout
-* ✅ Modular architecture via `header.php`, `footer.php`, `functions.php`
-* ✅ Easy database import via `SECMUN.sql`
+🔐 Authentication: Secure login/signup with role-specific session handling
+
+📊 Role-Based Dashboards: Dashboards for users, mid admins, and top admins
+
+🧾 Delegate Management: Admin pages for allotting delegate positions and MUN roles
+
+📰 Gazette System: Linking to an external github link of a project made by Mr. Vivian Alexandar Lyngdoh Noglait 
+
+📩 Contact Form: Form submission capability to reach the club
+
+🧠 Learn MUN: Dedicated section with resources for students new to MUNs
+
+🏆 Achievements Display: Timeline/gallery-style display of club milestones and awards
+
+📥 Document Upload: Presentation or document uploads (for admins)
 
 ---
 
@@ -181,7 +222,7 @@ THE SECMUN CLUB WEBSITE/
 ## 👨‍💻 Credits
 
 Developed by:
-* **Sambuddha Das**
+* **Sambuddha Das** *your avg 'hated by all thus isolated' student
 * *Secretary General of the SECMUN Club*
 * Department of Computer Science
 * St. Edmund's College
