@@ -60,6 +60,7 @@ This site includes responsive layout (only for PC as of now), role-based login s
 ├── delegate_allotment.php
 ├── learn_mun.php
 ├── index_sidebar.php
+├── secratariat.php
 │
 ├── style.css
 ├── sidebar_style.css
@@ -69,7 +70,7 @@ This site includes responsive layout (only for PC as of now), role-based login s
 │   ├── instagram-icon.png
 │   ├── whatsapp-icon-design.png
 │   ├── secmuny.png
-│   └── secretariat.png
+
 
 ```
 
@@ -114,6 +115,8 @@ This site includes responsive layout (only for PC as of now), role-based login s
 * **gazette.php:** Shows github project made by Mr. Vivian Alexandar Lyngdoh Noglait, which houses the club magazine(s) and the club newsletter(s).
 
 * **learn_mun.php:** Educational content introducing MUN concepts and terminology.
+  
+* * **secretariat.php:** One stop place to introduce all secratariat members 
 
 4. **Layout Components**
 
@@ -134,8 +137,6 @@ This site includes responsive layout (only for PC as of now), role-based login s
 6. **Assets**
 
 * **secmuny.png:** Main logo for the club.
-
-* **secretariat.png:** Image of the secretariat or club members.
 
 * **instagram-icon.png:** Social media icon.
 
