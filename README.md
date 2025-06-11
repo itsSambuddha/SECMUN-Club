@@ -34,7 +34,7 @@ This site includes responsive layout (only for PC as of now), role-based login s
 ├── .github/workflows/
 │   └── jekyll-gh-pages.yml
 │
-├── uploads/ppts/
+├── uploads/ppts/images
 │
 ├── SEC MUN.sql
 ├── README.md
